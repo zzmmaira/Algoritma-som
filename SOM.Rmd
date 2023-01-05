@@ -1,15 +1,14 @@
 ---
-title: "My Document"
-author: "Deden Istiawan-Institut Teknologi Statistika dan Bisnis Muhammadiyah"
+title: "Algoritma SOM dengan R"
 date: "`r Sys.Date()`"
-output: 
-  html_document:
-    theme: flatly
-    higlight: zenburn
-    toc: true
-    toc_float:
-      collapsed: true
-    df_print: paged
+author: ZIA ZAMMAIRA-Institut Teknologi Statistika dan Bisnis Muhammadiyah
+output:
+  rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
 bibliography: references.bib
 ---
 
@@ -23,24 +22,43 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# R Markdown
+# Pengertian Algoritma Self Organizing Map(SOM)
+Algoritma  Self organizing map (SOMs) adalah memungkinkan untuk menggambarkan data multi dimensi serta memiliki kemampuan untuk belajar secara mandiri (unsupersived learning).artinya, sebuah jaringan akan belajar dengan dibekali pengetahuan dasar ( parameter-parameter jaringan ) tampa adanya pengetahuan awal lebih dulu mengenai segmen dan karateristiknya serta tanpa harus mengetahui berapa kelompok  yang akan dibentuk, dan kemudian mengorganinasasikan sendiri hubungan-hubungan interkoneksi dalam dirinya atas masukan yang diberikan sehingga dengan demikian target tidak di butuhkan.(kohonen,1990).Dalam SOM, setiap sampel biologis dianggap sebagai partisi ruang yang terpisah, dan, setelah partisi ditentukan, gen diplot menggunakan matriks ekspresi sebagai koordinat.( Tamayo et al ,1999)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents [@deCarvalho2012]. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Tujuan 
+Tujuan dari algoritma ini adalah untuk mengklasifikasikan obyek baru berdasarkan atribut dan sample-sample dari iris data
 
-```{r cars}
-summary(cars)
+# Analisis SOM
+Pada artikel ini, kami ingin menggunakan kumpulan data analitik web di San Francisco. Kami ingin mempelajari bagaimana menggunakan SOM untuk mengidentifikasi karakteristik setiap cluster di banyak web di San Francisco dengan beberapa fitur.
+
+## Library yang digunakan
+On this article, we used kohonen package for making a SOM algorithm. Since we know that kohonen packages are from class, we use it to make many key function such as :
+1.somgrid : set simpul SOM yang diinisialisasi
+2.som : membuat model SOM, mengubah radius ketetanggaan, learning rate, dan iterasi
+3.plot.kohonen / plot : visualisasi SOM yang dihasilkan
+```{r}
+library(kohonen)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+# proses data
+library(readr)
+iris <- read_csv("iris.csv")
+View(iris)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+library(readr)
+iris <- read_csv("iris.csv")
+View(iris)
+```
+
+
+
+
+
 
 # Referensi
+
+

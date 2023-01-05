@@ -1,0 +1,59 @@
+---
+title: "Algoritma Self Organizing Map(SOM) dengan R"
+date: "`r Sys.Date()`"
+author: Zia Zammaira-Institut Teknologi Statistika dan Bisnis Muhammadiyah
+output:
+  rmdformats::robobook:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+bibliography: references.bib
+---
+
+```{=html}
+<style>
+body{ 
+text-align: justify}
+</style>
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pengertian Algoritma Self Organizing Map(SOM) 
+Self organizing map (SOMs) adalah memungkinkan untuk menggambarkan data multi dimensi serta memiliki kemampuan untuk belajar secara mandiri (unsupersived learning).artinya, sebuah jaringan akan belajar dengan dibekali pengetahuan dasar ( parameter-parameter jaringan ) tampa adanya pengetahuan awal lebih dulu mengenai segmen dan karateristiknya serta tanpa harus mengetahui berapa kelompok  yang akan dibentuk, dan kemudian mengorganinasasikan sendiri hubungan-hubungan interkoneksi dalam dirinya atas masukan yang diberikan sehingga dengan demikian target tidak di butuhkan.(kohonen,1990)
+Dalam SOM, setiap sampel biologis dianggap sebagai partisi ruang yang terpisah, dan, setelah partisi ditentukan, gen diplot menggunakan matriks ekspresi sebagai koordinat.( Tamayo et al ,1999)
+
+# Analisis SOM
+Pada artikel ini, kami ingin menggunakan kumpulan data analitik web di San Francisco. Kami ingin mempelajari bagaimana menggunakan SOM untuk mengidentifikasi karakteristik setiap cluster di banyak web di San Francisco dengan beberapa fitur.
+
+## library yang digunakan
+Pada artikel ini, kami menggunakan paket kohonen untuk membuat algoritma SOM. Karena kita mengetahui bahwa paket kohonen berasal dari kelas, kita menggunakannya untuk membuat banyak fungsi kunci seperti :
+-somgrid : initialized SOM node set
+-som : making a SOM model, change the radius of neighbourhood, learning rate, and iteration
+-plot.kohonen / plot : visualisation of resulting SOM
+
+```{r}
+library(kohonen)
+
+```
+
+
+
+
+
+
+
+
+
+# Referensi
+
+
+
+
+
+
+
+ 
