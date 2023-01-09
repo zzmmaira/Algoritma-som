@@ -33,38 +33,30 @@ Tujuan dari algoritma ini adalah untuk mengklasifikasikan obyek baru berdasarkan
 Pada artikel ini, kami ingin menggunakan kumpulan data analitik web di San Francisco. Kami ingin mempelajari bagaimana menggunakan SOM untuk mengidentifikasi karakteristik setiap cluster di banyak web di San Francisco dengan beberapa fitur.
 
 ## library yang digunakan
-Pada artikel ini, kami menggunakan paket kohonen untuk membuat algoritma SOM. Karena kita mengetahui bahwa paket kohonen berasal dari kelas, kita menggunakannya untuk membuat banyak fungsi kunci seperti :
-1.somgrid : initialized SOM node set
-2.som : making a SOM model, change the radius of neighbourhood, learning rate, and iteration
-3.plot.kohonen / plot : visualisation of resulting SOM
 
 ```{r}
+library(class)
+library(MASS)
+library(Rcpp)
 library(kohonen)
 ```
 
-### proses data
 ```{r}
-library(readr)
-iris <- read_csv("iris.csv")
-View(iris)
+search()
+ls(2)
+data(wines)
+head(wines)
 ```
 
 ```{r}
-library(readr)
-iris <- read_csv("C:/Users/ASUS/Downloads/iris.csv")
-View(iris)
+names(wines) <- tolower(names(wines))
+library(dplyr)
 ```
-
 ```{r}
-levels("iris.csv")
+plot(wines)
 ```
 
 
-```{r}
-## [1] "916"  "936"  "1178"
-```
-
-t mencakup tiga spesies iris dengan masing-masing 50 sampel serta beberapa sifat dari setiap bunga. Satu spesies bunga dapat dipisahkan secara linear dari dua lainnya, tetapi dua lainnya tidak dapat dipisahkan secara linear satu sama lain.
 
 
 
