@@ -93,8 +93,8 @@ add.cluster.boundaries(som.volcano,peta)
 
 
 # Referensi
-1.https://medium.com/@16611130/penerapan-self-organizing-map-som-pada-r-menggunakan-data-wines-7c83130fc1a0
-2.https://github.com/zzmmaira/Algoritma-som
+1.  https://medium.com/@16611130/penerapan-self-organizing-map-som-pada-r-menggunakan-data-wines-7c83130fc1a0
+2.  https://github.com/zzmmaira/Algoritma-som
 
 
 
